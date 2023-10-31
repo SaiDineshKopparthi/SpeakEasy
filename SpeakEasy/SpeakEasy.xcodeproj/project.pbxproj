@@ -14,6 +14,7 @@
 		51A87BA62AEF66CC00D6FC91 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 51A87BA52AEF66CC00D6FC91 /* Lottie */; };
 		51A87BAE2AEF6B2500D6FC91 /* SplashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A87BAD2AEF6B2500D6FC91 /* SplashScreenVC.swift */; };
 		51A87BB32AF0392000D6FC91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51A87BB22AF0392000D6FC91 /* Assets.xcassets */; };
+		A676C99C2AF0A55000422E76 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676C99B2AF0A55000422E76 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		51A87B9E2AEF661300D6FC91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51A87BAD2AEF6B2500D6FC91 /* SplashScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenVC.swift; sourceTree = "<group>"; };
 		51A87BB22AF0392000D6FC91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A676C99B2AF0A55000422E76 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		51A87BB62AF0567E00D6FC91 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A676C99B2AF0A55000422E76 /* LoginVC.swift */,
 				51A87BAD2AEF6B2500D6FC91 /* SplashScreenVC.swift */,
 			);
 			path = "View Controllers";
@@ -156,6 +159,7 @@
 			files = (
 				51A87B912AEF660F00D6FC91 /* AppDelegate.swift in Sources */,
 				51A87B932AEF660F00D6FC91 /* SceneDelegate.swift in Sources */,
+				A676C99C2AF0A55000422E76 /* LoginVC.swift in Sources */,
 				51A87BAE2AEF6B2500D6FC91 /* SplashScreenVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,7 +238,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -291,7 +295,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
