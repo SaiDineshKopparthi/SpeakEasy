@@ -44,23 +44,23 @@
         <!--LoginVC-->
         <scene sceneID="h2x-Ah-5kJ">
             <objects>
-                <viewController id="9kK-UV-HnY" customClass="LoginVC" customModule="SpeakEasy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="9kK-UV-HnY" customClass="LoginVC" customModule="SpeakEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0q0-GM-hHx">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QFS-yY-ZOM" userLabel="BigContainerSV">
-                                <rect key="frame" x="20" y="151.33333333333331" width="270.66666666666669" height="539.33333333333348"/>
+                                <rect key="frame" x="20" y="118" width="270.66666666666669" height="616"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="z5u-CB-aku">
-                                        <rect key="frame" x="0.0" y="0.0" width="270.66666666666669" height="107.66666666666667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="270.66666666666669" height="123.33333333333333"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ply-MQ-Qcq" customClass="LottieAnimationView" customModule="Lottie">
-                                        <rect key="frame" x="0.0" y="115.66666666666666" width="270.66666666666669" height="128"/>
+                                        <rect key="frame" x="0.0" y="131.33333333333334" width="270.66666666666669" height="128.00000000000003"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1y1-hU-LXN" userLabel="TextFieldsSV">
-                                        <rect key="frame" x="0.0" y="251.66666666666663" width="270.66666666666669" height="76"/>
+                                        <rect key="frame" x="0.0" y="267.33333333333331" width="270.66666666666669" height="76"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0IE-nb-NMJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="270.66666666666669" height="34"/>
@@ -75,7 +75,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ilb-iA-0cR" userLabel="LoginBTNSV">
-                                        <rect key="frame" x="0.0" y="335.66666666666663" width="270.66666666666669" height="34.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="351.33333333333331" width="270.66666666666669" height="34.333333333333314"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEn-N4-6Im">
                                                 <rect key="frame" x="0.0" y="0.0" width="85" height="34.333333333333336"/>
@@ -98,7 +98,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="m7y-Ld-C7E" userLabel="PasswordResetSV">
-                                        <rect key="frame" x="0.0" y="378" width="270.66666666666669" height="34.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="393.66666666666669" width="270.66666666666669" height="34.333333333333314"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gyp-7Q-MSd">
                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="34.333333333333336"/>
@@ -122,25 +122,25 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hKe-TU-jgM" userLabel="SignUpAreaSV">
-                                        <rect key="frame" x="0.0" y="420.33333333333326" width="270.66666666666669" height="119"/>
+                                        <rect key="frame" x="0.0" y="436" width="270.66666666666669" height="180"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Miz-rD-pvo">
-                                                <rect key="frame" x="0.0" y="0.0" width="270.66666666666669" height="34.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="270.66666666666669" height="54.666666666666664"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cjs-2f-tQ2" userLabel="SignUpSV">
-                                                <rect key="frame" x="0.0" y="42.333333333333371" width="270.66666666666669" height="34.333333333333343"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Cjs-2f-tQ2" userLabel="SignUpSV">
+                                                <rect key="frame" x="0.0" y="62.666666666666629" width="270.66666666666669" height="54.666666666666657"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acs-tV-pK5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="178.66666666666666" height="34.333333333333336"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acs-tV-pK5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="270.66666666666669" height="20.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="uRx-23-CYk">
-                                                        <rect key="frame" x="178.66666666666666" y="0.0" width="91.999999999999972" height="34.333333333333336"/>
+                                                        <rect key="frame" x="0.0" y="20.333333333333318" width="270.66666666666669" height="34.333333333333343"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
@@ -148,7 +148,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ngA-Iu-jla">
-                                                <rect key="frame" x="0.0" y="84.666666666666686" width="270.66666666666669" height="34.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="125.33333333333339" width="270.66666666666669" height="54.666666666666671"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
