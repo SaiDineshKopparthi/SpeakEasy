@@ -18,5 +18,8 @@ class LoginVC: UIViewController {
         self.logoAnimation.loopMode = .loop
         self.logoAnimation.play()
     }
-
+    @IBAction func login(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "loginToApp", sender: nil)
+    }
+    
 }

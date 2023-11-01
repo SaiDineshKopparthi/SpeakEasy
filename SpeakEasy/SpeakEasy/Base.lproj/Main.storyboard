@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -87,6 +88,9 @@
                                                 <rect key="frame" x="93" y="0.0" width="84.666666666666686" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                                <connections>
+                                                    <action selector="login:" destination="9kK-UV-HnY" eventType="touchUpInside" id="1hp-E9-PUb"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B7J-cZ-lwj">
                                                 <rect key="frame" x="185.66666666666666" y="0.0" width="84.999999999999972" height="34.333333333333336"/>
@@ -174,56 +178,58 @@
                     <navigationItem key="navigationItem" id="Tr4-b0-YtT"/>
                     <connections>
                         <outlet property="logoAnimation" destination="ply-MQ-Qcq" id="Co2-6N-E3U"/>
+                        <segue destination="udt-UD-Fsn" kind="show" identifier="loginToApp" id="92N-Go-m72"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JFA-kU-87w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1921.3740458015266" y="-2.1126760563380285"/>
         </scene>
-        <!--Item 2-->
+        <!--Translation-->
         <scene sceneID="BPn-Fd-w86">
             <objects>
-                <viewController id="H59-DD-CXC" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="H59-DD-CXC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wFH-Wk-iCe">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="zhR-9A-3nM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Nbb-ud-3ZA"/>
+                    <tabBarItem key="tabBarItem" title="Translation" id="Nbb-ud-3ZA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k8z-nU-S6b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3894" y="324"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="OS6-AU-PMj">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="TcA-6b-eHn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gAy-yr-L8o">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="pUi-Ab-EOW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="zut-Oc-lo2"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle" catalog="system" id="zut-Oc-lo2"/>
                     <navigationItem key="navigationItem" id="fBj-o2-Lvc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Zn-iU-TNg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2859" y="735"/>
         </scene>
-        <!--Item 1-->
+        <!--Chat Rooms-->
         <scene sceneID="7Ws-k6-3wK">
             <objects>
-                <viewController id="9SE-DV-h6H" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="9SE-DV-h6H" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BQz-In-ENk">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Nif-yJ-CyN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="vNk-0y-zes"/>
+                    <tabBarItem key="tabBarItem" title="Chat Rooms" image="ellipsis.message" catalog="system" id="vNk-0y-zes"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1Y-uY-Prs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -233,6 +239,7 @@
         <scene sceneID="ApN-1t-CaW">
             <objects>
                 <tabBarController modalPresentationStyle="fullScreen" id="udt-UD-Fsn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="9fd-tP-YYL"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dIE-Lc-QM3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -251,6 +258,8 @@
     </scenes>
     <resources>
         <image name="Icon" width="23.666666030883789" height="23.333333969116211"/>
+        <image name="ellipsis.message" catalog="system" width="128" height="116"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
