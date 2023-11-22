@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		514DE5532B0D7C3200D1CDF1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514DE5522B0D7C3200D1CDF1 /* Model.swift */; };
+		514DE5552B0D7CA800D1CDF1 /* TranslationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514DE5542B0D7CA800D1CDF1 /* TranslationVC.swift */; };
+		514DE5582B0E8FDC00D1CDF1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 514DE5572B0E8FDC00D1CDF1 /* Alamofire */; };
 		516C7C4B2B0ACC71007B211B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 516C7C4A2B0ACC71007B211B /* FirebaseAnalytics */; };
 		516C7C4D2B0ACC71007B211B /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 516C7C4C2B0ACC71007B211B /* FirebaseAnalyticsOnDeviceConversion */; };
 		516C7C4F2B0ACC71007B211B /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 516C7C4E2B0ACC71007B211B /* FirebaseAnalyticsSwift */; };
@@ -48,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		514DE5522B0D7C3200D1CDF1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		514DE5542B0D7CA800D1CDF1 /* TranslationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationVC.swift; sourceTree = "<group>"; };
 		516C7C812B0AECDB007B211B /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
 		516C7C832B0AF1CF007B211B /* NewAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountVC.swift; sourceTree = "<group>"; };
 		51A87B8D2AEF660F00D6FC91 /* SpeakEasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakEasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +93,7 @@
 				516C7C712B0ACC71007B211B /* FirebaseInstallations in Frameworks */,
 				516C7C792B0ACC71007B211B /* FirebaseRemoteConfig in Frameworks */,
 				516C7C7D2B0ACC71007B211B /* FirebaseStorage in Frameworks */,
+				514DE5582B0E8FDC00D1CDF1 /* Alamofire in Frameworks */,
 				516C7C5D2B0ACC71007B211B /* FirebaseDatabase in Frameworks */,
 				516C7C7F2B0ACC71007B211B /* FirebaseStorageCombine-Community in Frameworks */,
 				51A87BA62AEF66CC00D6FC91 /* Lottie in Frameworks */,
@@ -132,6 +138,7 @@
 				A606B1232AF3071C00A7E351 /* Supporting Files */,
 				51A87BB22AF0392000D6FC91 /* Assets.xcassets */,
 				51A87B962AEF660F00D6FC91 /* Main.storyboard */,
+				514DE5522B0D7C3200D1CDF1 /* Model.swift */,
 				516C7C812B0AECDB007B211B /* AuthenticationModel.swift */,
 				51A87BB62AF0567E00D6FC91 /* View Controllers */,
 				51A87B9B2AEF661300D6FC91 /* LaunchScreen.storyboard */,
@@ -146,6 +153,7 @@
 				A676C99B2AF0A55000422E76 /* LoginVC.swift */,
 				516C7C832B0AF1CF007B211B /* NewAccountVC.swift */,
 				51A87BAD2AEF6B2500D6FC91 /* SplashScreenVC.swift */,
+				514DE5542B0D7CA800D1CDF1 /* TranslationVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -204,6 +212,7 @@
 				516C7C7A2B0ACC71007B211B /* FirebaseRemoteConfigSwift */,
 				516C7C7C2B0ACC71007B211B /* FirebaseStorage */,
 				516C7C7E2B0ACC71007B211B /* FirebaseStorageCombine-Community */,
+				514DE5572B0E8FDC00D1CDF1 /* Alamofire */,
 			);
 			productName = SpeakEasy;
 			productReference = 51A87B8D2AEF660F00D6FC91 /* SpeakEasy.app */;
@@ -236,6 +245,7 @@
 			packageReferences = (
 				51A87BA42AEF66CB00D6FC91 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				516C7C492B0ACC71007B211B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				514DE5562B0E8FDC00D1CDF1 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 51A87B8E2AEF660F00D6FC91 /* Products */;
 			projectDirPath = "";
@@ -265,11 +275,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				514DE5532B0D7C3200D1CDF1 /* Model.swift in Sources */,
 				51A87B912AEF660F00D6FC91 /* AppDelegate.swift in Sources */,
 				516C7C822B0AECDB007B211B /* AuthenticationModel.swift in Sources */,
 				51A87B932AEF660F00D6FC91 /* SceneDelegate.swift in Sources */,
 				A676C99C2AF0A55000422E76 /* LoginVC.swift in Sources */,
 				51A87BAE2AEF6B2500D6FC91 /* SplashScreenVC.swift in Sources */,
+				514DE5552B0D7CA800D1CDF1 /* TranslationVC.swift in Sources */,
 				516C7C842B0AF1CF007B211B /* NewAccountVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,6 +507,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		514DE5562B0E8FDC00D1CDF1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
 		516C7C492B0ACC71007B211B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -514,6 +534,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		514DE5572B0E8FDC00D1CDF1 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 514DE5562B0E8FDC00D1CDF1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		516C7C4A2B0ACC71007B211B /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 516C7C492B0ACC71007B211B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

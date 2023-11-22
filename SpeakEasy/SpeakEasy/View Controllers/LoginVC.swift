@@ -13,6 +13,7 @@ class LoginVC: UIViewController {
     @IBOutlet weak var logoAnimation: LottieAnimationView!
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var messageLBL: UILabel!
     
     
     
@@ -24,10 +25,25 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func login(_ sender: UIButton) {
-    }
-    @IBAction func register(_ sender: UIButton) {
-    }
-    @IBAction func resetPassword(_ sender: UIButton) {
+        guard !(self.userNameTF.text!).isEmpty else {
+            self.messageLBL.text = "Please enter username!"
+            return
+        }
+        guard !(self.passwordTF.text!).isEmpty else {
+            self.messageLBL.text = "Please enter password!"
+            return
+        }
+        Task{
+            do{
+                try await AuthenticationManager.shared.signIn(email: self.userNameTF.text!, password: self.passwordTF.text!)
+                self.performSegue(withIdentifier: "loginToHome", sender: self)
+            }
+            catch {
+                print(error)
+                self.messageLBL.text = "Invalid Login Credentials"
+                
+            }
+        }
     }
     
 }
