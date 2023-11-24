@@ -8,45 +8,6 @@
 import Foundation
 import Alamofire
 
-//enum Languages: String, CaseIterable {
-//    case English
-//    case Spanish
-//    case French
-//    case German
-//    case Italian
-//    case Portuguese
-//    case Russian
-//    case Chinese
-//    case Japanese
-//    case Arabic
-//
-//
-//    var code: String{
-//        switch self{
-//        case .English:
-//            "en"
-//        case .Spanish:
-//            "es"
-//        case .French:
-//            "fr"
-//        case .German:
-//            "de"
-//        case .Italian:
-//            "it"
-//        case .Portuguese:
-//            "pt"
-//        case .Russian:
-//            "ru"
-//        case .Chinese:
-//            "zh"
-//        case .Japanese:
-//            "ja"
-//        case .Arabic:
-//            "ar"
-//        }
-//    }
-//}
-
 enum Languages: String, CaseIterable {
     case English
     case Spanish
@@ -58,6 +19,8 @@ enum Languages: String, CaseIterable {
     case Chinese
     case Japanese
     case Arabic
+    case Hindi
+    case Korean
 
 
     var code: String{
@@ -82,6 +45,10 @@ enum Languages: String, CaseIterable {
             "ja_JA"
         case .Arabic:
             "ar_AR"
+        case .Hindi:
+            "hi_HI"
+        case .Korean:
+            "ko_KO"
         }
     }
 }
@@ -92,8 +59,9 @@ struct Aloma{
     private static let url = "https://api-b2b.backenster.com/b1/api/v3/translate"
     private static let contentType = "application/json"
     private static let platform = "api"
+    private static var translatedText = "Sample"
     
-    static func translateText(from: String, to: String, with: String) -> String{
+    static func translateText(from: String, to: String, with: String, completion: @escaping (String) -> Void){
         let headers: HTTPHeaders = [
             "Authorization": self.apiKey,
             "Accept": self.contentType,
@@ -106,10 +74,6 @@ struct Aloma{
             "data": with,
             "platform": self.platform
         ]
-//        
-//        print(from)
-//        print(to)
-//        print(with)
         
         AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
         .responseJSON { response in
@@ -117,8 +81,8 @@ struct Aloma{
             case .success(let value):
                 if let valueDict = value as? [String: Any],
                    let resultValue = valueDict["result"] as? String {
-                    print("Result: \(resultValue)")
-                    return resultValue
+                    self.translatedText  = resultValue
+                    completion(resultValue)
                 } else {
                     print("Failed to extract 'result' from the JSON-like structure.")
                 }
@@ -127,6 +91,5 @@ struct Aloma{
             }
         }
         
-        return ""
     }
 }

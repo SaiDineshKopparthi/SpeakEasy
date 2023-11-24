@@ -35,7 +35,9 @@ class TranslationVC: UIViewController {
                                                                           UIAction(title: "Chinese", handler: options),
                                                                           UIAction(title: "Japanese", handler: options),
                                                                           UIAction(title: "Arabic", handler: options),
-                                                                          UIAction(title: "English", state: .on, handler: options)])
+                                                                          UIAction(title: "English", state: .on, handler: options),
+                                                                          UIAction(title: "Hindi", handler: options),
+                                                                          UIAction(title: "Korean", handler: options)])
         self.targetLangBTN.menu = UIMenu(title: "Language", children: [UIAction(title: "Italian", handler: options),
                                                                        UIAction(title: "German", handler: options),
                                                                        UIAction(title: "French", handler: options),
@@ -45,7 +47,9 @@ class TranslationVC: UIViewController {
                                                                        UIAction(title: "Chinese", handler: options),
                                                                        UIAction(title: "Japanese", handler: options),
                                                                        UIAction(title: "Arabic", handler: options),
-                                                                       UIAction(title: "English", handler: options)])
+                                                                       UIAction(title: "English", handler: options),
+                                                                       UIAction(title: "Hindi", handler: options),
+                                                                       UIAction(title: "Korean", handler: options),])
         self.targetLangBTN.showsMenuAsPrimaryAction = true
         self.targetLangBTN.changesSelectionAsPrimaryAction = true
         self.inputLangBTN.showsMenuAsPrimaryAction = true
@@ -73,8 +77,9 @@ class TranslationVC: UIViewController {
             }
         }
         
-        let result = Aloma.translateText(from: self.inputLangCode, to: self.targetLangCode, with: inputText)
-        self.translatedTV.text = result
+        Aloma.translateText(from: self.inputLangCode, to: self.targetLangCode, with: inputText){ result in
+            self.translatedTV.text = result
+        }
         
     }
     
@@ -88,7 +93,7 @@ class TranslationVC: UIViewController {
 //        self.translatedTV.textColor = .black
 //        let inputLanguage = self.inputLangBTN.titleLabel?.text
 //        let targetLanguage = self.targetLangBTN.titleLabel?.text
-//        
+//
 //        for lang in Languages.allCases {
 //            if(inputLanguage == lang.rawValue){
 //                self.inputLangCode = lang.code
@@ -97,9 +102,9 @@ class TranslationVC: UIViewController {
 //                self.targetLangCode = lang.code
 //            }
 //        }
-//        
+//
 //        if let encodedText = inputText.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),let url = URL(string: "https://api.mymemory.translated.net/get?q=\(encodedText)&langpair=\(self.inputLangCode)|\(self.targetLangCode)") {
-//            
+//
 //            URLSession.shared.dataTask(with: url) { (data, response, error) in
 //                if let data = data {
 //                    do {
@@ -117,9 +122,9 @@ class TranslationVC: UIViewController {
 //                    print("Error: \(error.localizedDescription)")
 //                }
 //            }.resume()
-//            
+//
 //        }
-//        
+//
 //    }
     
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		511B09382B1000630061E81B /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511B09372B1000630061E81B /* ProfileVC.swift */; };
+		511B093A2B100A690061E81B /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511B09392B100A690061E81B /* ResetPasswordVC.swift */; };
 		514DE5532B0D7C3200D1CDF1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514DE5522B0D7C3200D1CDF1 /* Model.swift */; };
 		514DE5552B0D7CA800D1CDF1 /* TranslationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514DE5542B0D7CA800D1CDF1 /* TranslationVC.swift */; };
 		514DE5582B0E8FDC00D1CDF1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 514DE5572B0E8FDC00D1CDF1 /* Alamofire */; };
@@ -51,6 +53,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		511B09372B1000630061E81B /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		511B09392B100A690061E81B /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		514DE5522B0D7C3200D1CDF1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		514DE5542B0D7CA800D1CDF1 /* TranslationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationVC.swift; sourceTree = "<group>"; };
 		516C7C812B0AECDB007B211B /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
@@ -150,10 +154,12 @@
 		51A87BB62AF0567E00D6FC91 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				511B09392B100A690061E81B /* ResetPasswordVC.swift */,
 				A676C99B2AF0A55000422E76 /* LoginVC.swift */,
 				516C7C832B0AF1CF007B211B /* NewAccountVC.swift */,
 				51A87BAD2AEF6B2500D6FC91 /* SplashScreenVC.swift */,
 				514DE5542B0D7CA800D1CDF1 /* TranslationVC.swift */,
+				511B09372B1000630061E81B /* ProfileVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -278,11 +284,13 @@
 				514DE5532B0D7C3200D1CDF1 /* Model.swift in Sources */,
 				51A87B912AEF660F00D6FC91 /* AppDelegate.swift in Sources */,
 				516C7C822B0AECDB007B211B /* AuthenticationModel.swift in Sources */,
+				511B09382B1000630061E81B /* ProfileVC.swift in Sources */,
 				51A87B932AEF660F00D6FC91 /* SceneDelegate.swift in Sources */,
 				A676C99C2AF0A55000422E76 /* LoginVC.swift in Sources */,
 				51A87BAE2AEF6B2500D6FC91 /* SplashScreenVC.swift in Sources */,
 				514DE5552B0D7CA800D1CDF1 /* TranslationVC.swift in Sources */,
 				516C7C842B0AF1CF007B211B /* NewAccountVC.swift in Sources */,
+				511B093A2B100A690061E81B /* ResetPasswordVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

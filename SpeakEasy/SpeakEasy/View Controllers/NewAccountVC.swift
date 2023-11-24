@@ -74,7 +74,6 @@ class NewAccountVC: UIViewController {
                 self.db.collection("users").document(authResult.uid).setData(userData) { error in
                     if let error = error {
                         print("Error writing user data to Firestore: \(error.localizedDescription)")
-                        // Handle the error appropriately
                     } else {
                         print("User registered successfully with additional data!")
                         self.performSegue(withIdentifier: "registerToLogin", sender: self)
