@@ -28,6 +28,15 @@
       }
     },
     {
+      "identity" : "cometchat-chat-uikit-ios-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cometchat-pro/cometchat-chat-uikit-ios-swift.git",
+      "state" : {
+        "revision" : "0ff524761096fd566faa0afce1033e93a7a048aa",
+        "version" : "4.0.3"
+      }
+    },
+    {
       "identity" : "firebase-ios-sdk",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/firebase-ios-sdk",
@@ -88,6 +97,15 @@
       "state" : {
         "revision" : "2d12673670417654f08f5f90fdd62926dc3a2648",
         "version" : "100.0.0"
+      }
+    },
+    {
+      "identity" : "ios-chat-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cometchat-pro/ios-chat-sdk.git",
+      "state" : {
+        "revision" : "6fd83229d552cb4e3ecf1299337c5c94e70c483e",
+        "version" : "4.0.3"
       }
     },
     {

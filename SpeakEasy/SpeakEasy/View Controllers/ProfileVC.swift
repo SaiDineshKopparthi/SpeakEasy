@@ -7,6 +7,8 @@
 
 import UIKit
 import Firebase
+import CometChatUIKitSwift
+import CometChatSDK
 
 class ProfileVC: UIViewController {
     
@@ -18,7 +20,7 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var messageLBL: UILabel!
     private let user = AuthenticationManager.shared.getCurrentUser()
     private let db = Firestore.firestore()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.updateBTN.isEnabled = false
@@ -47,9 +49,11 @@ class ProfileVC: UIViewController {
     }
     
     
+    
     @IBAction func textChange(_ sender: UITextField) {
         self.updateBTN.isEnabled = true
     }
+    
     
     @IBAction func updateUserDetails(_ sender: UIButton) {
         
@@ -72,17 +76,45 @@ class ProfileVC: UIViewController {
                 self.updateBTN.isEnabled = false
             }
         }
+        
+        let uid = self.user.uid
+        let name = self.nameTF.text!
+        
+        let user = User(uid: uid, name: name)
+        CometChatUIKit.update(user: user){ result in
+            switch result {
+            case .success(_):
+                debugPrint("User updated successfully \(String(describing: user.name))")
+                break
+            case .onError(let error):
+                debugPrint("Updating user failed with exception: \(error.errorDescription)")
+                break
+            @unknown default:
+                break
+            }
+        }
+        
     }
     
-    @IBAction func signOut(_ sender: UIBarButtonItem) {
+    @IBAction func signOut(_ sender: UIButton) {
         do {
             try AuthenticationManager.shared.signOut()
-            self.performSegue(withIdentifier: "profileToLogin", sender: self)
+            let user = User(uid: self.user.uid, name: self.nameTF.text!)
+            CometChatUIKit.logout(user: user){ result in
+                switch result {
+                case .success(_):
+                    debugPrint("User logout successful \(String(describing: user.name))")
+                    break
+                case .onError(let error):
+                    debugPrint("Logout of user failed with exception: \(error.errorDescription)")
+                    break
+                @unknown default:
+                    break
+                }
+            }
+            self.performSegue(withIdentifier: "profileToLogin", sender: sender)
         }catch {
             print("Error: \(error)")
         }
     }
-    
-    
 }
-

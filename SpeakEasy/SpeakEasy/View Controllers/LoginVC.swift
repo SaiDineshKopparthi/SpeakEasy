@@ -7,6 +7,7 @@
 
 import UIKit
 import Lottie
+import CometChatUIKitSwift
 
 class LoginVC: UIViewController {
     
@@ -22,8 +23,9 @@ class LoginVC: UIViewController {
         self.logoAnimation.animation = LottieAnimation.named("Animation_LoginScreen")
         self.logoAnimation.loopMode = .loop
         self.logoAnimation.play()
-        self.userNameTF.text = "dinesh@mail.com"
-        self.passwordTF.text = "123456"
+        
+        self.userNameTF.text = "alex@mail.com"
+        self.passwordTF.text = "WEDsan121001@#"
     }
     
     @IBAction func login(_ sender: UIButton) {
@@ -37,7 +39,20 @@ class LoginVC: UIViewController {
         }
         Task{
             do{
-                try await AuthenticationManager.shared.signIn(email: self.userNameTF.text!, password: self.passwordTF.text!)
+                let user = try await AuthenticationManager.shared.signIn(email: self.userNameTF.text!, password: self.passwordTF.text!)
+                let uid = user.uid
+                CometChatUIKit.login(uid: uid) { result in
+                    switch result {
+                    case .success(let user):
+                        debugPrint("User logged in successfully  \(String(describing: user.name))")
+                        break
+                    case .onError(let error):
+                        debugPrint("Login failed with exception: \(error.errorDescription)")
+                        break
+                    @unknown default:
+                        break
+                    }
+                }
                 self.performSegue(withIdentifier: "loginToHome", sender: self)
             }
             catch {

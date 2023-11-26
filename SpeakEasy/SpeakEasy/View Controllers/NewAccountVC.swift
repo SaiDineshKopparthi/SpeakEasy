@@ -7,6 +7,8 @@
 
 import UIKit
 import Firebase
+import CometChatUIKitSwift
+import CometChatSDK
 
 class NewAccountVC: UIViewController {
     
@@ -79,6 +81,23 @@ class NewAccountVC: UIViewController {
                         self.performSegue(withIdentifier: "registerToLogin", sender: self)
                     }
                 }
+                let uid = authResult.uid
+                let name = self.nameTF.text!
+                
+                let user = User(uid: uid, name: name)
+                CometChatUIKit.create(user: user) { result in
+                    switch result {
+                    case .success(_):
+                        debugPrint("User created successfully \(String(describing: user.name))")
+                        break
+                    case .onError(let error):
+                        debugPrint("Creating new user failed with exception: \(error.errorDescription)")
+                        break
+                    @unknown default:
+                        break
+                    }
+                }
+                
                 
             } catch {
                 self.messageLBL.text = error.localizedDescription
