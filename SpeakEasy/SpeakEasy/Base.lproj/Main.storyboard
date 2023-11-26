@@ -576,7 +576,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="xvT-YC-oeU" customClass="ProfileVC" customModule="SpeakEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y6a-QZ-BQy">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pSG-Kc-XKU" userLabel="BigContainerSV">
@@ -732,7 +732,7 @@
                             <constraint firstItem="pSG-Kc-XKU" firstAttribute="top" secondItem="m5Y-2T-prm" secondAttribute="top" constant="50" id="Cuu-US-kzp"/>
                             <constraint firstItem="pSG-Kc-XKU" firstAttribute="leading" secondItem="m5Y-2T-prm" secondAttribute="leading" constant="20" id="KfS-kh-o0H"/>
                             <constraint firstItem="m5Y-2T-prm" firstAttribute="trailing" secondItem="pSG-Kc-XKU" secondAttribute="trailing" constant="20" id="e55-WQ-E2d"/>
-                            <constraint firstItem="m5Y-2T-prm" firstAttribute="bottom" secondItem="pSG-Kc-XKU" secondAttribute="bottom" constant="250" id="mVG-vk-3ZH"/>
+                            <constraint firstItem="m5Y-2T-prm" firstAttribute="bottom" secondItem="pSG-Kc-XKU" secondAttribute="bottom" constant="50" id="mVG-vk-3ZH"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle" catalog="system" id="jVB-ha-lF2"/>

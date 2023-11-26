@@ -23,9 +23,6 @@ class LoginVC: UIViewController {
         self.logoAnimation.animation = LottieAnimation.named("Animation_LoginScreen")
         self.logoAnimation.loopMode = .loop
         self.logoAnimation.play()
-        
-        self.userNameTF.text = "alex@mail.com"
-        self.passwordTF.text = "WEDsan121001@#"
     }
     
     @IBAction func login(_ sender: UIButton) {
