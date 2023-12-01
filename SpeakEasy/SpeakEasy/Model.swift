@@ -21,34 +21,34 @@ enum Languages: String, CaseIterable {
     case Arabic
     case Hindi
     case Korean
-
-
+    
+    
     var code: String{
         switch self{
         case .English:
-            "en_GB"
+            return "en_GB"
         case .Spanish:
-            "es_ES"
+            return "es_ES"
         case .French:
-            "fr_Fr"
+            return "fr_Fr"
         case .German:
-            "de_DE"
+            return "de_DE"
         case .Italian:
-            "it_IT"
+            return "it_IT"
         case .Portuguese:
-            "pt_PT"
+            return "pt_PT"
         case .Russian:
-            "ru_RU"
+            return "ru_RU"
         case .Chinese:
-            "zh_ZH"
+            return "zh_ZH"
         case .Japanese:
-            "ja_JA"
+            return "ja_JA"
         case .Arabic:
-            "ar_AR"
+            return "ar_AR"
         case .Hindi:
-            "hi_HI"
+            return  "hi_HI"
         case .Korean:
-            "ko_KO"
+            return "ko_KO"
         }
     }
 }
@@ -76,20 +76,50 @@ struct Aloma{
         ]
         
         AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
-        .responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                if let valueDict = value as? [String: Any],
-                   let resultValue = valueDict["result"] as? String {
-                    self.translatedText  = resultValue
-                    completion(resultValue)
-                } else {
-                    print("Failed to extract 'result' from the JSON-like structure.")
+            .responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    if let valueDict = value as? [String: Any],
+                       let resultValue = valueDict["result"] as? String {
+                        self.translatedText  = resultValue
+                        completion(resultValue)
+                    } else {
+                        print("Failed to extract 'result' from the JSON-like structure.")
+                    }
+                case .failure(let error):
+                    print("Error: \(error.localizedDescription)")
                 }
-            case .failure(let error):
-                print("Error: \(error.localizedDescription)")
             }
-        }
         
+    }
+}
+
+struct ChatUserDeletion{
+    private static let apiKey = "495d8ffba005c24df4e7e7d344e053e4d1cbb93e"
+    private static var url = "https://248630e580cddc5a.api-us.cometchat.io/v3/users/"
+    
+    private static let headers: HTTPHeaders = [
+        "accept": "application/json",
+        "apikey": apiKey,
+        "content-type": "application/json"
+    ]
+    
+    private static let parameters: [String: Any] = [
+        "permanent": true
+    ]
+    
+    static func deleteUser(uid: String){
+        url = url + uid
+        
+        AF.request(url, method: .delete, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    print("Successfully deleted user: \(value)")
+                case .failure(let error):
+                    print("Error deleting user: \(error)")
+                }
+            }
     }
 }

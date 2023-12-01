@@ -159,12 +159,12 @@
 			isa = PBXGroup;
 			children = (
 				51A87BAD2AEF6B2500D6FC91 /* SplashScreenVC.swift */,
+				511B09372B1000630061E81B /* ProfileVC.swift */,
 				A676C99B2AF0A55000422E76 /* LoginVC.swift */,
 				516C7C832B0AF1CF007B211B /* NewAccountVC.swift */,
 				511B09392B100A690061E81B /* ResetPasswordVC.swift */,
 				9C3BE7292B11A2FC00F1AF5C /* GroupsVC.swift */,
 				514DE5542B0D7CA800D1CDF1 /* TranslationVC.swift */,
-				511B09372B1000630061E81B /* ProfileVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";

@@ -17,7 +17,6 @@ class SplashScreenVC: UIViewController {
         self.logoAnimationView.loopMode = .loop
         self.logoAnimationView.play()
         
-        //Navigates to Login Screen after 2 seconds
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
             self.performSegue(withIdentifier: "splashToLogin", sender: nil)
         }

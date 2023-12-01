@@ -11,12 +11,10 @@ import FirebaseAuth
 struct AuthDataResultModel{
     let uid: String
     let email: String?
-    let photoUrl: String?
     
     init(user: User){
         self.uid = user.uid
         self.email = user.email
-        self.photoUrl = user.photoURL?.absoluteString
     }
 }
 
@@ -37,8 +35,8 @@ final class AuthenticationManager {
     }
     
     func getCurrentUser() -> AuthDataResultModel{
-        let authDataResult = Auth.auth().currentUser
-        return AuthDataResultModel(user: authDataResult!)
+        let user = Auth.auth().currentUser
+        return AuthDataResultModel(user: user!)
     }
     
     func signOut() throws{
@@ -52,6 +50,19 @@ final class AuthenticationManager {
         } catch {
             print("Error sending password reset email: \(error.localizedDescription)")
             throw error
+        }
+    }
+    
+    func deleteUser(){
+        
+        let user = Auth.auth().currentUser
+        
+        user?.delete { error in
+            if let error = error {
+                print("Error while trying to delete user - \(error.localizedDescription)")
+            } else {
+                print("Success! User deleted.")
+            }
         }
     }
 }

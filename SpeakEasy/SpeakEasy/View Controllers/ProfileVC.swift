@@ -117,4 +117,30 @@ class ProfileVC: UIViewController {
             print("Error: \(error)")
         }
     }
+    
+    @IBAction func deleteUser(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Confirmation", message: "Do you want to delete your account?", preferredStyle: .alert)
+        
+        let yesAction = UIAlertAction(title: "Yes", style: .default) { (action) in
+            let uid = self.user.uid
+            AuthenticationManager.shared.deleteUser()
+            ChatUserDeletion.deleteUser(uid: uid)
+            self.performSegue(withIdentifier: "profileToLogin", sender: self)
+            self.db.collection("users").document(uid).delete() { error in
+                if let error = error {
+                    print("Error deleting user data: \(error.localizedDescription)")
+                } else {
+                    print("User details deleted succesfully")
+                }
+            }
+        }
+        
+        let noAction = UIAlertAction(title: "No", style: .cancel)
+        
+        alert.addAction(yesAction)
+        alert.addAction(noAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
 }
