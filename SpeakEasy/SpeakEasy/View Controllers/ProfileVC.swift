@@ -23,8 +23,13 @@ class ProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.updateBTN.isEnabled = false
         self.getUserDetails(user: user)
+        self.messageLBL.text = ""
     }
     
     private func getUserDetails(user : AuthDataResultModel){
