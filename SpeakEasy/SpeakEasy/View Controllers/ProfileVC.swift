@@ -54,7 +54,6 @@ class ProfileVC: UIViewController {
         self.updateBTN.isEnabled = true
     }
     
-    
     @IBAction func updateUserDetails(_ sender: UIButton) {
         
         guard !(self.nameTF.text!).isEmpty, !(self.birthdayTF.text!).isEmpty, !(self.countryTF.text!).isEmpty else{

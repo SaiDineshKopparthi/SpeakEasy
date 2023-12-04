@@ -82,6 +82,11 @@ class TranslationVC: UIViewController {
         }
         
     }
+    @IBAction func reset(_ sender: UIBarButtonItem) {
+        self.translatedTV.text = "Translated text will be displayed here."
+        self.translatedTV.textColor = .black
+        self.inputTF.text = ""
+    }
     
 //    @IBAction func translateText(_ sender: UIButton) {
 //        guard let inputText = self.inputTF.text, !inputText.isEmpty else{
